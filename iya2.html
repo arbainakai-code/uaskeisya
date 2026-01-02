@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Katalog Produk - MyBrand</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        
+        body { background-color:white; color: #333; padding: 40px 20px; }
+
+        h1 { text-align: center; margin-bottom: 40px; color: #2c3e50; }
+
+        /* Wadah Utama Produk */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 25px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* Kartu Produk */
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+
+        .card:hover { transform: translateY(-10px); }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            background-color: #ddd; 
+            object-fit: cover;
+        }
+
+        .card-info { padding: 20px; }
+        
+        .price { 
+            color: #e74c3c; 
+            font-size: 1.2rem; 
+            font-weight: bold; 
+            margin: 10px 0; 
+        }
+
+        .btn-beli {
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+        }
+
+        .btn-beli:hover { background-color: #219150; }
+
+        .back-link { display: block; text-align: center; margin-top: 50px; text-decoration: none; color: #3498db; }
+    </style>
+</head>
+<body>
+
+    <h1>OUR MENU</h1>
+
+    <div class="product-grid">
+        <div class="card">
+            <img src="bibimbap.jpeg" alt="Produk 1" class="card-img">
+            <div class="card-info">
+                <h3>BIBIMBAP</h3>
+                <p class="price">Rp 35.000</p>
+                <button class="btn-beli" onclick="tambahKeKeranjang('BIBIMBAP')">Beli Sekarang</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Vegan Chili Oil Wontons Recipe _ Vegan Recipe _ Beyond Meat.jpeg" alt="Produk 2" class="card-img">
+            <div class="card-info">
+                <h3>WONTON CHILI OIL</h3>
+                <p class="price">Rp 20.000</p>
+                <button class="btn-beli" onclick="tambahKeKeranjang('WONTON CHILI OIL')">Beli Sekarang</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Nasi Goreng (Indonesian Fried Rice).jpeg" alt="Produk 3" class="card-img">
+            <div class="card-info">
+                <h3>NASI GORENG GILA</h3>
+                <p class="price">Rp 15.000</p>
+                <button class="btn-beli" onclick="tambahKeKeranjang('NASI GORENG GILA')">Beli Sekarang</button>
+            </div>
+        </div>
+    </div>
+
+    <a href="kocak.html" class="back-link">← Kembali ke Home</a>
+
+    <script>
+        function tambahKeKeranjang(namaProduk) {
+            alert(namaProduk + " berhasil ditambahkan ke keranjang!");
+        }
+    </script>
+
+</body>
+</html>
